@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1 class="quiz-title">✨ Ultimate Quiz ✨</h1>
+
+    <div class="settings">
+      <select id="difficulty">
+        <option value="">Select Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="startBtn">Start Quiz</button>
+    </div>
+
+    <div class="quiz hidden">
+      <div class="timer" id="timer">Time: 30s</div>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <div class="question-card">
+        <div class="question" id="question">Question text</div>
+        <ul class="options" id="options"></ul>
+      </div>
+
+      <button id="nextBtn">Next</button>
+      <div class="score" id="score"></div>
+      <button id="retakeBtn" class="hidden">Retake Quiz</button>
+
+      <div class="leaderboard hidden" id="leaderboard">
+        <h3>Leaderboard (Top 5)</h3>
+        <ol id="leaderboardList"></ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Feedback -->
+  <div class="contact">
+    <a href="mailto:harshitaaaarya@gmail.com">Contact & Feedback</a>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="correctSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+  <audio id="wrongSound" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
+  <audio id="completeSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
